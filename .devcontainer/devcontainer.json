@@ -1,0 +1,26 @@
+{
+	"name": "Ubuntu",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"settings": {
+		"terminal.integrated.defaultProfile.linux": "zsh",
+		"editor.formatOnSave": true,
+		"bazel.buildifierExecutable": "/usr/local/bin/buildifier"
+	},
+	"extensions": [
+		"ms-azuretools.vscode-docker",
+		"BazelBuild.vscode-bazel",
+		// General Programming Extensions
+		"xaver.clang-format",
+		// Language Specific Extensions
+		// Python
+		"ms-python.python",
+		// CPP
+		"ms-vscode.cpptools",
+		"ms-vscode.cpptools-extension-pack"
+	],
+	"forwardPorts": [
+		5000
+	]
+}
