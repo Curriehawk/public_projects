@@ -13,5 +13,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: bazelbuild/setup-bazelisk@v2
-    - run: bazel build //... --config clang-tidy
+    - run: bazel build //...
     - run: bazel test //...
