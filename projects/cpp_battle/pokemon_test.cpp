@@ -65,6 +65,30 @@ TEST(Pokemontest, gain_xp40) {
   EXPECT_EQ(45, Alex.xp);
 }
 
+TEST(Pokemontest, gain_xp40_level) {
+  //  const Calculator calc;
+  // EXPECT_EQ(calc.add(1, 2), 3);
+  Pokemon Alex;
+  Alex.xp = 5;
+  Alex.level = 1;
+
+  Alex.gainXP(95);
+  EXPECT_EQ(0, Alex.xp);
+  EXPECT_EQ(2, Alex.level);
+}
+
+TEST(Pokemontest, gain_xp30_level) {
+  //  const Calculator calc;
+  // EXPECT_EQ(calc.add(1, 2), 3);
+  Pokemon Alex;
+  Alex.xp = 70;
+  Alex.level = 7;
+
+  Alex.gainXP(50);
+  EXPECT_EQ(0, Alex.xp);
+  EXPECT_EQ(8, Alex.level);
+}
+
 TEST(Pokemontest, lose_health30) {
   //  const Calculator calc;
   // EXPECT_EQ(calc.add(1, 2), 3);

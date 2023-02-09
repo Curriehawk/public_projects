@@ -13,7 +13,13 @@ public:
 
   void removeHealth(int damage) { health = health - damage; }
 
-  void gainXP(int xpgain) { xp = xp + xpgain; }
+  void gainXP(int xpgain) {
+    xp = xp + xpgain;
+    if (xp >= 100) {
+      levelUp();
+      xp = 0;
+    }
+  }
 
   void levelUp() { level = level + 1; }
 };
