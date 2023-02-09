@@ -1,0 +1,15 @@
+
+cc_binary(
+    name = "battle",
+    srcs = ["main.cpp", "pokemon.hpp", "pokemon.cpp"],
+)
+
+cc_test(
+    name = "pokemon_test",
+    size = "small",
+    srcs = ["pokemon_test.cpp", "pokemon.hpp", "pokemon.cpp"],
+    deps = [
+      #  "//projects/cpp_calculator_lib:calculator",
+        "@com_google_googletest//:gtest_main",
+    ],
+)
